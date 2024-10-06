@@ -1,0 +1,65 @@
+.rightnav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.rightnav input {
+  padding: 0.5em;
+}
+.rightnav input:focus {
+  outline: none;
+}
+.rightnav button {
+  background-color: transparent;
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  margin: 0 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  padding: 0.5em;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+.rightnav button:hover {
+  background-color: rgba(255, 255, 255, 0.127);
+}
+.rightpanel {
+  max-width: 500px;
+  background-color: var(--black);
+  background-size: 117px 188px;
+  transition: all 0.5s ease-out;
+  position: fixed;
+  z-index: 5;
+  right: -100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  padding: 3em;
+  display: flex;
+
+  &.open {
+    visibility: visible;
+    width: 100%;
+    right: 0;
+    opacity: 1;
+  }
+}
+#cart-button {
+  z-index: 10;
+  position: relative;
+}
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
